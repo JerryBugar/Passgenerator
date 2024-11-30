@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <span class="alert">Copied to clipboard!</span>
+
+        <div class="top-bar">
+          <span class="password">Password Generator</span>
+          <span class="copy-btn"><i class="fa-solid fa-copy"></i></span>
+        </div>
+
+        <div class="form-container">
+          <form class="password-form">
+            <div class="slider-container">
+              <div class="label-container">
+                <label>Character Length</label>
+                <span>10</span>
+              </div>
+
+              <input
+                type="range"
+                min="1"
+                max="30"
+                value="10"
+                class="slider-range"
+                id="charLength"
+              />
+            </div>
+
+            <div class="switch-container">
+              <span>Numbers</span>
+              <label class="toggle-switch">
+                <input type="checkbox" name="numbers-switch" />
+                <span class="toggle-slider round"></span>
+              </label>
+            </div>
+
+            <div class="switch-container">
+              <span>Symbols</span>
+              <label class="toggle-switch">
+                <input type="checkbox" name="symbols-switch" />
+                <span class="toggle-slider round"></span>
+              </label>
+            </div>
+
+            <div class="switch-container">
+              <span>Uppercase Letters</span>
+              <label class="toggle-switch">
+                <input type="checkbox" name="uppercase-switch" checked />
+                <span class="toggle-slider round"></span>
+              </label>
+            </div>
+
+            <div class="strength-meter">
+              <span>Strength</span>
+
+              <div class="bars">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+                <div class="bar" id="bar4"></div>
+              </div>
+            </div>
+
+            <div class="strength-indicator">
+              <span class="strength-label">Password Strength:</span>
+              <span class="strength-text">Medium</span>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Generate
+              <span class="submit-icon"
+                ><i class="fa-sharp fa-solid fa-arrow-right"></i
+              ></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
